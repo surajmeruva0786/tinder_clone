@@ -1,9 +1,13 @@
 import React from 'react'
-
+import PersonIcon from '@mui/icons-material/Person';
+import ForumIcon from '@mui/icons-material/Forum';
+import "./Header.css";
 function Header() {
   return (
-    <div>
-        <h2></h2>
+    <div className='header'>
+        <PersonIcon />
+        <h2>header</h2>
+        <ForumIcon />
     </div>
   )
 }
