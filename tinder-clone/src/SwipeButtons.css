@@ -1,0 +1,87 @@
+.swipeButtons {
+    position: fixed;
+    bottom: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.swipeButtons .MuiIconButton__root {
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0px 10px 53px 0px rgba(0, 0, 0, 0.3);
+}
+
+.swipeButtons .MuiIconButton__root:hover {
+    background-color: #eee;
+}
+
+.swipeButtons .MuiIconButton__root:nth-child(1) {
+    color: #e42256;
+}
+
+.swipeButtons .MuiIconButton__root:nth-child(2) {
+    color: #e42256;
+}
+
+.swipeButtons .MuiIconButton__root:nth-child(3) {
+    color: #e42256;
+}
+
+.swipeButtons .MuiIconButton__root:nth-child(4) {
+    color: #e42256;
+}
+
+.swipeButtons .MuiIconButton__root:nth-child(5) {
+    color: #e42256;
+}
+
+.swipeButtons__repeat {
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0px 10px 53px 0px rgba(0, 0, 0, 0.3);
+}   
+
+.swipeButtons__left {
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0px 10px 53px 0px rgba(0, 0, 0, 0.3);
+}
+
+.swipeButtons__right {
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0px 10px 53px 0px rgba(0, 0, 0, 0.3);
+}
+
+.swipeButtons__star {
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0px 10px 53px 0px rgba(0, 0, 0, 0.3);
+}
+
+.swipeButtons__lightning {
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0px 10px 53px 0px rgba(0, 0, 0, 0.3);
+}
+
+.swipeButtons__repeat:hover {
+    background-color: #eee;
+}
+
+.swipeButtons__left:hover {
+    background-color: #eee;
+}
+
+.swipeButtons__right:hover {
+    background-color: #eee;
+}
+
+.swipeButtons__star:hover {
+    background-color: #eee;
+}
+
+.swipeButtons__lightning:hover {
+    background-color: #eee;
+}   
