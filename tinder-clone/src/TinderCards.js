@@ -1,23 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { useDrag } from 'react-use-gesture';
+import database from './firebase';
+import { collection, onSnapshot } from 'firebase/firestore';
 import './TinderCards.css';
 
 function TinderCards() {
-    const [people, setPeople] = useState([
-        {
-            name: "Elon Musk",
-            url: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=400'
-        },
-        {
-            name: "Jeff Bezos",
-            url: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400'
-        },
-        {
-            name: "Mark Zuckerberg",
-            url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400'
-        }
-    ]);
+    const [people, setPeople] = useState([]);
 
     const [gone, setGone] = useState(new Set());
 
@@ -60,6 +49,14 @@ function TinderCards() {
             </animated.div>
         );
     };
+
+    useEffect(() => {
+        const unsubscribe = onSnapshot(collection(database, "people"), (snapshot) => {
+            setPeople(snapshot.docs.map((doc) => doc.data()));
+        });
+
+        return () => unsubscribe();
+    }, []);
 
     return (
         <div className="tinderCards">
