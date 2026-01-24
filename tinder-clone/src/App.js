@@ -4,6 +4,7 @@ import TinderCards from './TinderCards';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SwipeButtons from './SwipeButtons';
+import Chats from './Chats';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
 
           <Route
             path="/chat"
-            element={<Chat />}
+            element={<Chats />}
           />
 
           <Route
